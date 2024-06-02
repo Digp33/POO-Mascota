@@ -1,4 +1,6 @@
 package modelo;
+import java.util.Date;
+
 /*Crear la clase Persona tiene como atributos: nombre (String), paterno
 (String), materno (String), fecha_nacimiento (Date) y CURP (String)
 Equipo:
@@ -21,6 +23,10 @@ public class Persona {
         this.fechaNacimiento= fechaNacimiento;
         this.curp = curp;
 
+    }
+    //Sobrecarga del constructor
+    public Persona(String nombre, String apellidoPaterno, Date fechaNacimiento, String curp) {
+        this(nombre, apellidoPaterno, "", fechaNacimiento, curp);  
     }
 
     public void setNombre(String nombre) {
